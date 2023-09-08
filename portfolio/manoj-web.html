@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manoj-Portfolio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500&family=Montserrat:wght@500&family=Roboto:wght@400;500&family=VT323&display=swap" rel="stylesheet">
+	<style>
+		body{
+			background-image: url("bg.gif");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100%;
+			color:white;
+			font-family: 'Montserrat', sans-serif;
+			overflow-x: clip;
+		}
+
+		.navbar{
+			height:120px;
+			display:flex;
+			width: 100%;
+		}
+
+		.manu{
+			width: 50%;
+			position: absolute;
+			right: -20px;
+			top:-5px;
+			border:2px solid white;
+			border-radius:0px 0px 0px 50px;
+
+		}
+
+		@keyframes glow {
+		    0% {
+		        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+		    }
+		    100% {
+		        box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+		    }
+		}
+
+		@keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .manu li:hover {
+		    background-color: #20C20E;
+		    animation: glow 1s infinite alternate; 
+		    color: white;
+		    cursor: pointer;
+		}
+
+
+		.manu ul{
+			list-style: none;
+			display: flex;
+			
+		}
+
+
+		.manu li{
+			margin-left: 120px;
+			border:2px solid #20C20E;
+			padding:8px;
+			border-radius: 10px;
+			color:#fff;
+		}
+
+		.vector{
+			float: right;
+			margin-top:100px;
+			margin-right: 50px;
+			animation: float 2s ease-in-out infinite ;
+		}
+
+
+		.logo{
+			height: 150px;
+			width:200px;
+			margin-top:-10px;
+			margin-left:30px;
+		}
+
+
+		.greet{
+			position: absolute;
+            top: 55%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+		}
+
+
+		.greet h1{
+			font-size: 54px;
+			color: #DF64EE;
+			letter-spacing: 1.5px;
+		}
+
+
+		.greet p{
+			font-size: 28px;
+			color:#20C20E;
+		}
+
+		.about{
+			margin-top: 50%;
+			height:auto;
+			width: 80%;
+			margin-left: 10%;
+			text-align: center;
+			padding: 10px;
+			line-height: 250%;
+			letter-spacing: 0.5px;
+			border-radius: 30px;
+			background-color: #421448;
+			box-shadow: 0px 0px 10px 10px#421448;	
+		}
+
+		.about p{
+			font-size:24px;	
+		}
+
+		.card{
+			margin-top:150px;
+			height:500px;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;	
+			
+		}
+
+		.fade{
+			opacity: 0; /* Start with 0 opacity */
+            transform: translateY(50px); /* Start with a 50px rise-up effect */
+            animation: fadeInRiseUp 1s ease-in-out forwards; /* Apply fadeInRiseUp animation */
+		}
+
+		.card-item{
+			height: 450px;
+			width: 400px;
+			border-radius:20px;
+			background-color: #47203b;
+		}
+
+		.card-item h2{
+			text-align: center;
+			margin-bottom:80px;
+		}
+
+		.card-item li{
+			margin-bottom: 30px;
+		}
+
+		.frame{
+			text-align: center;
+			margin-top: 100px;
+		}
+
+
+		.skill{
+			margin-top:80px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.skill .icon{
+			height: 80px;
+			width: 90px;
+			text-align: center;
+			
+			
+		}
+
+		.right{
+			opacity: 0; /* Start with 0 opacity */
+            transform: translateX(50px); /* Start with a 50px rise-up effect */
+            animation: fadeInRight 1s ease-in-out forwards; /* Apply fadeInRiseUp animation */
+		}
+
+		.left{
+			opacity: 0; /* Start with 0 opacity */
+            transform: translateX(-50px); /* Start with a 50px rise-up effect */
+            animation: fadeInLeft 1s ease-in-out forwards; /* Apply fadeInRiseUp animation */
+		}
+
+		.confidence{
+			margin-top: 80px;
+			font-size:24px;
+			height:auto;
+			width: 80%;
+			margin-left: 10%;
+			text-align: center;
+			padding: 10px;
+			line-height: 200%;
+			letter-spacing: 0.5px;
+			border-radius: 30px;
+			background-color: #421448;
+			box-shadow: 0px 0px 10px 10px#421448;	
+		}
+
+		.contact{
+			text-align: center;
+			margin-top: 80px;
+		}
+
+		.social{
+			height: 100px;
+			width: 100px;
+		}
+
+		@keyframes fadeInRiseUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+		@keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+		@keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+	</style>
+</head>
+<body>
+
+	<div class = "navbar">
+		<div ><img class = "logo" src="logo.png"></div>
+		<div class = "manu">
+			<ul>
+				<li>
+					Home
+				</li>
+				<li>
+					About
+				</li>
+				<li>
+					Resume
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="greet"><h1>Welcome To My Portfolio</h1>
+
+	<h1>This is Manoj</h1>
+	<p>Iam a Web Developer</p></div>
+
+	<div class = "vector">
+		<img src="https://cdn3d.iconscout.com/3d/premium/thumb/internet-of-things-programmer-6230317-5107141.png?f=webp">
+	</div>
+
+	<div class="about fade">
+		<h2>About Me</h2>
+
+		<p>I'm Manoj, a dedicated web developer passionate about bringing digital ideas to life. With a background in web technologies and design, I create captivating websites and applications. My journey in web development began with a fascination for the internet's potential. Over the years, I've honed my skills in both front-end and back-end development, crafting seamless, user-friendly experiences. I'm driven by the challenge of solving complex problems and am committed to exceeding client expectations. Collaboration and open communication are essential to my approach. I'm not just a developer; I'm a partner in your digital journey. Let's connect and turn your web ideas into reality!</p>
+		
+	</div>
+
+	<div class = "card fade">
+		<div class = "card-item"><h2>Education</h2> <ul>
+			<li>Schooling - Karaikudi (Biology-Maths)</li>
+			<li>BE CSE (AI & ML) : PSG College Of Technology</li>
+			<li>Diploma - Data Science : Indian Institute of Technology-Madras</li>
+		</ul></div>
+		<div class = "card-item"><h2>My Skills</h2><ul>
+			<li>Front-End Web Development</li>
+			<li>Mobile Application Development</li>
+			<li>Django</li>
+			<li>Version Control</li>
+			<li>Programming in Python, Java, Kotlin</li>
+			<li>SQL for data analytics</li>
+		</ul></div>
+
+		<div class = "card-item"><h2>Certifications</h2><ul>
+			<li>HTML, CSS, Javascript for web developers</li>
+			<li>Tailwind CSS - Essential Training</li>
+			<li>ReactJs - Essential Training</li>
+			<li>Version Control - Coursera</li>
+			<li>Meta Android Developer - Meta</li>
+			<li>SQL for data analytics - Udemy</li>
+		</ul></div>
+	</div>
+
+	<h1 class = "frame">Frameworks Used</h1>
+	<div class = "frame-box">
+		<div class="skill">
+		<div><img class = "icon right" src = "images/html.png"></div>
+		<div><img class = "icon right" src = "images/css.png"></div>
+		<div><img class = "icon right" src = "images/js.png"></div>
+		
+	</div>
+	
+	<div class = "skill">
+		
+		<div><img class = "icon left" src = "images/react.png"></div>
+		<div><img class = "icon left" src = "images/tail.png"></div>
+		<div><img class = "icon left" src = "images/boot.png"></div>
+	</div>
+
+	<div class = "skill">
+		<div><img class = "icon left" src = "images/django.png"></div>
+		<div><img class = "icon left" src = "images/kotlin.png"></div>
+		<div><img class = "icon left" src = "images/sql.png"></div>
+	</div>
+
+	
+	<div class="confidence fade">
+		<h2>My Confidence</h2>
+
+		<p>I possess a diverse skill set that combines strong leadership, multitasking, and coding abilities. As a leader, I have honed the art of guiding and motivating teams towards achieving common goals. My leadership style is characterized by effective communication, decision-making, and the ability to inspire and mentor team members to reach their full potential.
+
+			Multitasking is second nature to me. I thrive in dynamic environments where juggling multiple tasks and priorities is essential. This skill enables me to efficiently manage various aspects of complex projects while ensuring each facet receives the attention it deserves.
+			
+			Coding is not just a profession but a passion. I have a solid foundation in various programming languages and frameworks, allowing me to transform ideas into functional and user-friendly digital solutions. My coding skills are complemented by problem-solving abilities that help me navigate challenges and devise innovative solutions.
+			
+			In summary, I am a dynamic professional with robust leadership skills, adept at multitasking, and proficient in coding. My unique combination of these skills allows me to excel in complex and demanding environments, where effective leadership, efficient task management, and technical expertise are crucial. I am driven to harness these capabilities to drive success and innovation in every project I undertake.</p>
+		
+	</div>
+
+	
+	</div>
+
+	<h1 class="contact ">Contact Me</h1>
+	<div class = "skill fade">
+		<div><a href="https://wa.link/gibsad" target="_blank"><img class = "social" src = "images/wp.png"></a></div>
+		<div><a href="https://www.instagram.com/mmanojbilla/" target="_blank"><img class = "social" src = "images/insta.png"></a></div>
+		<div><a href="https://msng.link/o?munch2005=tg" target="_blank"><img class = "social" src = "images/tele.png"></a></div>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	
+
+	<script>
+        // JavaScript code to trigger the animation when scrolling
+        const containers = document.querySelectorAll('.fade');
+
+        function checkContainers() {
+            containers.forEach(container => {
+                const containerTop = container.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (containerTop < windowHeight * 0.95) {
+                    container.style.animation = 'fadeInRiseUp 1s ease-in-out forwards';
+                } else {
+                    container.style.animation = 'none';
+                }
+            });
+        }
+        window.addEventListener('scroll', checkContainers);
+        window.addEventListener('load', checkContainers);
+
+		const containers2 = document.querySelectorAll('.right');
+
+        function checkContainers2() {
+            containers2.forEach(container => {
+                const containerTop = container.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (containerTop < windowHeight * 0.95) {
+                    container.style.animation = 'fadeInRight 1s ease-in-out forwards';
+                } else {
+                    container.style.animation = 'none';
+                }
+            });
+        }
+        window.addEventListener('scroll', checkContainers2);
+        window.addEventListener('load', checkContainers2);
+
+		const containers3 = document.querySelectorAll('.left');
+
+		function checkContainers3() {
+			containers3.forEach(container => {
+				const containerTop = container.getBoundingClientRect().top;
+				const windowHeight = window.innerHeight;
+				if (containerTop < windowHeight * 0.95) {
+					container.style.animation = 'fadeInLeft 1s ease-in-out forwards';
+				} else {
+					container.style.animation = 'none';
+				}
+			});
+		}
+		window.addEventListener('scroll', checkContainers3);
+		window.addEventListener('load', checkContainers3);
+	</script>
+
+</body>
+</html>
